@@ -1,4 +1,4 @@
-rec {
+{
   description = "Builds and installs a fortune database file using Marcus Aurelius's Meditations";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -13,10 +13,7 @@ rec {
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
       in {
-        packages.meditations-fortune = import ./default.nix {
-          inherit pkgs;
-          inherit description;
-        };
+        packages.meditations-fortune = import ./default.nix {inherit pkgs;};
         defaultPackage = self.packages.${system}.meditations-fortune;
       }
     );

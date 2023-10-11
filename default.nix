@@ -1,9 +1,7 @@
-{
-  pkgs,
-  description,
-  ...
-}:
+{pkgs}:
 pkgs.stdenv.mkDerivation {
+  description = "Builds and installs a fortune database file using Marcus Aurelius's Meditations";
+
   pname = "meditations-fortune";
   version = "1.0.0";
 
@@ -19,13 +17,12 @@ pkgs.stdenv.mkDerivation {
   '';
 
   meta = {
-    inherit description;
     license = with pkgs.lib.licenses; [mit publicDomain];
     longDescription = ''
-      ${description}. Once installed, you can simply run
-      `fortune meditations` to get a paragraph. In addition to
-      the original roman numerals that indicate the paragraph
-      number, I have added a prefix indicating which book the
+      Builds and installs a fortune database file using Marcus Aurelius's
+      Meditations. Once installed, you can simply run `fortune meditations` to
+      get a paragraph. In addition to the original roman numerals that indicate
+      the paragraph number, I have added a prefix indicating which book the
       paragraph belongs to.
     '';
   };
