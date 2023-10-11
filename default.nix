@@ -20,10 +20,11 @@ pkgs.stdenv.mkDerivation {
     license = with pkgs.lib.licenses; [mit publicDomain];
     longDescription = ''
       Builds and installs a fortune database file using Marcus Aurelius's
-      Meditations. Once installed, you can simply run `fortune meditations` to
-      get a paragraph. In addition to the original roman numerals that indicate
-      the paragraph number, I have added a prefix indicating which book the
-      paragraph belongs to.
+      Meditations. Once installed, you can simply run e.g. `fortune
+      ~/.nix-profile/share/games/fortunes/meditations` to get a paragraph. In
+      addition to the original roman numerals that indicate the paragraph
+      number, I have added a prefix indicating which book the paragraph belongs
+      to.
     '';
   };
 }
