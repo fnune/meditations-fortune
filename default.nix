@@ -14,7 +14,7 @@ pkgs.stdenv.mkDerivation {
   phases = ["installPhase"];
 
   installPhase = ''
-    install -Dm644 $src $out/share/fortunes/meditations
+    install -D $src $out/share/fortunes/meditations
     strfile $out/share/fortunes/meditations $out/share/fortunes/meditations.dat
   '';
 
