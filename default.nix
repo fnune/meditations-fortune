@@ -12,8 +12,8 @@ pkgs.stdenv.mkDerivation {
   phases = ["installPhase"];
 
   installPhase = ''
-    install -D $src $out/share/fortunes/meditations
-    strfile $out/share/fortunes/meditations $out/share/fortunes/meditations.dat
+    install -D $src $out/share/games/fortunes/meditations
+    strfile $out/share/games/fortunes/meditations $out/share/games/fortunes/meditations.dat
   '';
 
   meta = {
